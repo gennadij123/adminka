@@ -1,0 +1,26 @@
+<html>
+{% load static %}
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="{% static "css/styles.css" %}" />
+    <title>Login-smit</title>
+</head>
+<body>
+<h1>Страница авторизации </h1>
+    <h1>Ну попробуй ещё разок )  </h1>
+
+    <img src="{% static "image/СМИТ.jpg" %}" alt="Stones along the river" >
+<form action="" method="POST">
+{% csrf_token %}
+
+{% if error %}
+{{ error }}
+{% endif %}
+{{ form.as_p }}
+<input type="submit" name="submit" value="Log in"/>
+</form>
+
+</html>
+
+</body>
